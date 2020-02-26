@@ -34,3 +34,11 @@ img {
     font-size:150px;
     text-align: right;
 }
+
+#userWin {
+    color: rgb(198, 79, 133);
+}
+
+#userLose {
+    color: rgb(198, 79, 133)
+}

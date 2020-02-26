@@ -36,7 +36,7 @@
                     console.log("New Total:"+totalScore);
 
                     $("#totalScore").text(totalScore);
-                        if (assignedNumber === totalScore) {
+                        if (assignedNumber == totalScore) {
                             userWin();
                         }
     
@@ -51,7 +51,7 @@
                     console.log("New total:"+totalScore);
 
                     $("#totalScore").text(totalScore);
-                        if (assignedNumber === totalScore) {
+                        if (assignedNumber == totalScore) {
                             userWin();
                         }
     
@@ -66,7 +66,7 @@
                     console.log("New Total:"+totalScore);
 
                     $("#totalScore").text(totalScore);
-                        if (assignedNumber === totalScore) {
+                        if (assignedNumber == totalScore) {
                             userWin();
                         }
     
@@ -82,7 +82,7 @@
                     console.log("New Total:"+totalScore);    
 
                     $("#totalScore").text(totalScore);
-                        if (assignedNumber === totalScore) {
+                        if (assignedNumber == totalScore) {
                             userWin();
                         }
     
@@ -97,39 +97,42 @@
 
 
                 //Creating 3 functions including win, lose and reset after user complete the game. 
+                
+                
                 function resetGame (){
+
                     var totalScore =0;
+                    $("#totalScore").text(totalScore);
+
                     var assignedNumber = Math.floor(Math.random()*120)+19;
-                    console.log(assignedNumber);
+                    
                     var jewelBlue = Math.floor(Math.random()*19)+1;
                     console.log(jewelBlue);
+
                     var jewelPink = Math.floor(Math.random()*19)+1;
                     console.log(jewelPink);
+
                     var jewelPurple = Math.floor(Math.random()*19)+1;
                     console.log(jewelPurple);
+
                     var jewelRound = Math.floor(Math.random()*19)+1;
                     console.log(jewelRound);
-                    $("#totalScore").text(totalScore);
-                    $("#assignedNumber").text(assignedNumber);
-
-                  
-
                 
-                }
+                };
 
                 function userWin (){
-                    alert("Congrats!");
-                    win= win+1;
+                    alert("Congrats! You Wi");
+                    win++;
                     $("#userWin").text("Wins:"+" "+win);
                     resetGame();
 
                 };
 
                 function userLose (){
-                    lose=lose+1;
+                    lose++;
                     $("#userLose").text("Lose:"+ " " +lose);
                     resetGame();
-                }
+                };
     
               
             });
