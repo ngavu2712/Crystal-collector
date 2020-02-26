@@ -29,51 +29,64 @@
                 var lose = 0;
                 $("#userLose").html("Lose:" + lose);
             
-                //Assigned click event to jewels through the id
+                //Assigned click event to jewelBlue through the id, adding function and console.log the new total score
                 $("#blue").on("click",function(){
+
                     totalScore= totalScore + jewelBlue
-                    $("#totalScore").text(jewelBlue);
+                    console.log("New Total:"+totalScore);
+
+                    $("#totalScore").text(totalScore);
                         if (assignedNumber === totalScore) {
                             userWin();
                         }
     
-                        else if (assignedNumber !== totalScore) {
+                        else if (assignedNumber < totalScore) {
                             userLose();
                         };
                 });
 
+                //Assigned click event to jewelPink through the id, adding function and console.log the new total score
                 $("#pink").on("click",function(){
                     totalScore= totalScore + jewelPink
-                    $("#totalScore").text(jewelPink);
+                    console.log("New total:"+totalScore);
+
+                    $("#totalScore").text(totalScore);
                         if (assignedNumber === totalScore) {
                             userWin();
                         }
     
-                        else if (assignedNumber !== totalScore) {
+                        else if (assignedNumber < totalScore) {
                             userLose();
                         };
                 });
 
+                //Assigned click event to jewelPurple through the id, adding function and console.log the new total score
                 $("#purple").on("click",function(){
                     totalScore= totalScore + jewelPurple
-                    $("#totalScore").text(jewelPurple);
+                    console.log("New Total:"+totalScore);
+
+                    $("#totalScore").text(totalScore);
                         if (assignedNumber === totalScore) {
                             userWin();
                         }
     
-                        else if (assignedNumber !== totalScore) {
+                        else if (assignedNumber < totalScore) {
                             userLose();
                         };
                 });
 
+
+                //Assigned click event to jewelRound through the id, adding function and console.log the new total score
                 $("#round").on("click",function(){
                     totalScore= totalScore + jewelRound
-                    $("#totalScore").text(jewelRound);
+                    console.log("New Total:"+totalScore);    
+
+                    $("#totalScore").text(totalScore);
                         if (assignedNumber === totalScore) {
                             userWin();
                         }
     
-                        else if (assignedNumber !== totalScore) {
+                        else if (assignedNumber < totalScore) {
                             userLose();
                         };
                 });
@@ -82,6 +95,8 @@
                 $("#assignedNumber").append(assignedNumber);
                 $("#totalScore").append(totalScore);
 
+
+                //Creating 3 functions including win, lose and reset after user complete the game. 
                 function resetGame (){
                     var totalScore =0;
                     var assignedNumber = Math.floor(Math.random()*120)+19;
@@ -89,18 +104,16 @@
                     var jewelPink = Math.floor(Math.random()*19)+1;
                     var jewelPurple = Math.floor(Math.random()*19)+1;
                     var jewelRound = Math.floor(Math.random()*19)+1;
-                    var win = 0;
-                    $("#userWin").html("Wins:" + win);
-                    var lose = 0;
-                    $("#userLose").html("Lose:" + lose);
                 }
 
                 function userWin (){
+                    alert("Congrats!");
                     win++;
                     resetGame();
                 };
 
                 function userLose (){
+                    alert("Bummer! Try again!");
                     lose++;
                     resetGame();
                 }
