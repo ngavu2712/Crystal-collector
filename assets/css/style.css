@@ -24,3 +24,13 @@ img {
     margin:auto;
     padding: 5px;
 }
+
+#totalScore {
+    font-size:150px;
+    text-align: left;
+}
+
+#assignedNumber {
+    font-size:150px;
+    text-align: right;
+}
