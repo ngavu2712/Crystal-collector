@@ -62,7 +62,7 @@
 
                 //Assigned click event to jewelPurple through the id, adding function and console.log the new total score
                 $("#purple").on("click",function(){
-                    totalScore= totalScore + jewelPurple
+                    totalScore= totalScore + jewelPurple;
                     console.log("New Total:"+totalScore);
 
                     $("#totalScore").text(totalScore);
@@ -78,7 +78,7 @@
 
                 //Assigned click event to jewelRound through the id, adding function and console.log the new total score
                 $("#round").on("click",function(){
-                    totalScore= totalScore + jewelRound
+                    totalScore= totalScore + jewelRound;
                     console.log("New Total:"+totalScore);    
 
                     $("#totalScore").text(totalScore);
@@ -92,29 +92,42 @@
                 });
 
                 //Link the JS assignedNumber to the assigned Number <div>
-                $("#assignedNumber").append(assignedNumber);
-                $("#totalScore").append(totalScore);
+                $("#assignedNumber").text(assignedNumber);
+                $("#totalScore").text(totalScore);
 
 
                 //Creating 3 functions including win, lose and reset after user complete the game. 
                 function resetGame (){
                     var totalScore =0;
                     var assignedNumber = Math.floor(Math.random()*120)+19;
+                    console.log(assignedNumber);
                     var jewelBlue = Math.floor(Math.random()*19)+1;
+                    console.log(jewelBlue);
                     var jewelPink = Math.floor(Math.random()*19)+1;
+                    console.log(jewelPink);
                     var jewelPurple = Math.floor(Math.random()*19)+1;
+                    console.log(jewelPurple);
                     var jewelRound = Math.floor(Math.random()*19)+1;
+                    console.log(jewelRound);
+                    $("#totalScore").text(totalScore);
+                    $("#assignedNumber").text(assignedNumber);
+
+                  
+
+                
                 }
 
                 function userWin (){
                     alert("Congrats!");
-                    win++;
+                    win= win+1;
+                    $("#userWin").text("Wins:"+" "+win);
                     resetGame();
+
                 };
 
                 function userLose (){
-                    alert("Bummer! Try again!");
-                    lose++;
+                    lose=lose+1;
+                    $("#userLose").text("Lose:"+ " " +lose);
                     resetGame();
                 }
     
