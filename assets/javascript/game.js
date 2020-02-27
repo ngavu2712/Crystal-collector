@@ -17,7 +17,7 @@
             $(document).ready(function(){
 
                 var totalScore =0;
-                var assignedNumber = Math.floor(Math.random()*120)+19;
+                var assignedNumber = Math.floor(Math.random()*101)+19;
                 var jewelBlue = Math.floor(Math.random()*19)+1;
                 var jewelPink = Math.floor(Math.random()*19)+1;
                 var jewelPurple = Math.floor(Math.random()*19)+1;
@@ -108,7 +108,9 @@
                     totalScore =0;
                     $("#totalScore").text(totalScore);
 
-                    assignedNumber = Math.floor(Math.random()*120)+19;
+                    assignedNumber = Math.floor(Math.random()*101)+19;
+                    console.log(assignedNumber);
+                    $("#assignedNumber").text(assignedNumber);
                     
                     jewelBlue = Math.floor(Math.random()*19)+1;
                     console.log(jewelBlue);
@@ -133,6 +135,7 @@
                 };
 
                 function userLose (){
+                    alert("Opps! Try Again!");
                     lose++;
                     $("#userLose").text("Lose:"+ " " +lose);
                     resetGame();
