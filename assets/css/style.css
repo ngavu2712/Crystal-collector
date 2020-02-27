@@ -42,3 +42,18 @@ img {
 #userLose {
     color: rgb(198, 79, 133)
 }
+
+#blue:hover {
+        width:130px;
+    }
+
+#pink:hover {
+    width:130px;
+    }
+#purple:hover {
+    width:130px;
+    }
+
+#round:hover {
+    width:130px;
+    }
