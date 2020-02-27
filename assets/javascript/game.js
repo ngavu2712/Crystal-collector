@@ -22,7 +22,11 @@
                 var jewelPink = Math.floor(Math.random()*19)+1;
                 var jewelPurple = Math.floor(Math.random()*19)+1;
                 var jewelRound = Math.floor(Math.random()*19)+1;
-
+                console.log("blue:",jewelBlue);
+                console.log("pink:",jewelPink);
+                console.log("purple:",jewelPurple);
+                console.log("round:",jewelRound);
+    
                 //Create Win and Lose Variables and link them to HTML
                 var win = 0;
                 $("#userWin").html("Wins:" + win);
@@ -101,27 +105,27 @@
                 
                 function resetGame (){
 
-                    var totalScore =0;
+                    totalScore =0;
                     $("#totalScore").text(totalScore);
 
-                    var assignedNumber = Math.floor(Math.random()*120)+19;
+                    assignedNumber = Math.floor(Math.random()*120)+19;
                     
-                    var jewelBlue = Math.floor(Math.random()*19)+1;
+                    jewelBlue = Math.floor(Math.random()*19)+1;
                     console.log(jewelBlue);
 
-                    var jewelPink = Math.floor(Math.random()*19)+1;
+                    jewelPink = Math.floor(Math.random()*19)+1;
                     console.log(jewelPink);
 
-                    var jewelPurple = Math.floor(Math.random()*19)+1;
+                    jewelPurple = Math.floor(Math.random()*19)+1;
                     console.log(jewelPurple);
 
-                    var jewelRound = Math.floor(Math.random()*19)+1;
+                    jewelRound = Math.floor(Math.random()*19)+1;
                     console.log(jewelRound);
                 
                 };
 
                 function userWin (){
-                    alert("Congrats! You Wi");
+                    alert("Congrats! You Win");
                     win++;
                     $("#userWin").text("Wins:"+" "+win);
                     resetGame();
